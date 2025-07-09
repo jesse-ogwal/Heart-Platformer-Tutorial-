@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1ui0kq7jt4up"]
+
+[ext_resource type="PackedScene" uid="uid://bi32hl7nibmyu" path="res://new_world.tscn" id="1_c5krn"]
+[ext_resource type="PackedScene" uid="uid://ckptjjta137rd" path="res://level_two.tscn" id="2_26lis"]
+[ext_resource type="PackedScene" uid="uid://dmloyvxcs3tql" path="res://spikes.tscn" id="3_jvxmm"]
+[ext_resource type="PackedScene" uid="uid://6grglltwylv0" path="res://heart.tscn" id="4_lwmyu"]
+[ext_resource type="PackedScene" uid="uid://c3gcrysq57hm4" path="res://tile_map.tscn" id="5_fjwjd"]
+[ext_resource type="AudioStream" uid="uid://csncnh5w72tfq" path="res://sounds/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3" id="6_ix4bu"]
+
+[node name="LevelOne" instance=ExtResource("1_c5krn")]
+next_level = ExtResource("2_26lis")
+
+[node name="NewPlayer" parent="." index="1"]
+position = Vector2(32, 112)
+
+[node name="Spikes" parent="." index="3" instance=ExtResource("3_jvxmm")]
+position = Vector2(128, 144)
+
+[node name="Spikes2" parent="." index="4" instance=ExtResource("3_jvxmm")]
+position = Vector2(144, 144)
+
+[node name="Spikes3" parent="." index="5" instance=ExtResource("3_jvxmm")]
+position = Vector2(256, 144)
+
+[node name="Spikes4" parent="." index="6" instance=ExtResource("3_jvxmm")]
+position = Vector2(272, 144)
+
+[node name="Heart" parent="." index="7" instance=ExtResource("4_lwmyu")]
+position = Vector2(152, 96)
+
+[node name="Heart2" parent="." index="8" instance=ExtResource("4_lwmyu")]
+position = Vector2(32, 64)
+
+[node name="Heart3" parent="." index="9" instance=ExtResource("4_lwmyu")]
+position = Vector2(208, 136)
+
+[node name="Heart4" parent="." index="10" instance=ExtResource("4_lwmyu")]
+position = Vector2(280, 88)
+
+[node name="Heart5" parent="." index="11" instance=ExtResource("4_lwmyu")]
+position = Vector2(264, 40)
+
+[node name="Heart7" parent="." index="12" instance=ExtResource("4_lwmyu")]
+position = Vector2(304, -16)
+
+[node name="LevelTileMap2" parent="." index="13" instance=ExtResource("5_fjwjd")]
+layer_0/tile_data = PackedInt32Array(589832, 65536, 0, 589833, 65536, 0, 589834, 524288, 2, 589835, 65536, 0, 524298, 196608, 0, 589836, 65536, 0, 589837, 65536, 0, 589838, 65536, 0, 589839, 524288, 2, 589840, 65536, 0, 524303, 196608, 0, 589841, 65536, 0, 589842, 393216, 2, 18, 0, 0, 19, 131072, 0, 65554, 0, 1, 131090, 0, 1, 65555, 131072, 1, 131091, 131072, 1, 196626, 0, 1, 262162, 0, 1, 327698, 0, 1, 262163, 131072, 1, 196627, 131072, 1, 327699, 131072, 1, 393235, 131072, 1, 458771, 131072, 1, 458770, 0, 1, 393234, 0, 1, 524306, 0, 1, 589843, 131072, 1, 524307, 131072, 1, 655379, 131072, 2, 655378, 65536, 2, 655377, 65536, 2, 655376, 65536, 2, 655375, 65536, 2, 655374, 65536, 2, 655373, 65536, 2, 655372, 65536, 2, 655371, 65536, 2, 655370, 65536, 2, 655369, 65536, 2, 655368, 65536, 2, 655367, 65536, 2, 655366, 65536, 2, 589830, 65536, 1, 655361, 65536, 2, 589825, 65536, 1, 589824, 0, 1, 524288, 0, 1, 458752, 262144, 2, 393216, 196608, 1, 0, 196608, 0, 65536, 196608, 1, 131072, 196608, 1, 196608, 196608, 1, 262144, 196608, 1, 327680, 196608, 1, 655360, 0, 2, 655362, 65536, 2, 655363, 65536, 2, 655364, 65536, 2, 655365, 65536, 2, 589829, 65536, 1, 589828, 65536, 1, 589827, 65536, 1, 589826, 65536, 1, 524289, 65536, 1, 524290, 327680, 2, 524291, 65536, 0, 524292, 65536, 0, 524293, 65536, 0, 458754, 131072, 0, 458753, 65536, 0, 589831, 327680, 2, 524294, 65536, 0, 524295, 458752, 2, 458759, 196608, 0, 458755, 131074, 0, 458756, 196610, 0, 458758, 1, 0)
+layer_1/tile_data = PackedInt32Array(15, 131072, 0, 14, 0, 0, 65550, 0, 1, 65551, 131072, 1, 131086, 0, 1, 131087, 131072, 1, 196623, 131072, 1, 196622, 0, 1, 262158, 0, 2, 262159, 131072, 2, 524302, 262145, 0, 524299, 393218, 0, 524301, 196609, 0, 458754, 65536, 0, 524293, 65536, 0, 524291, 65536, 1, 524290, 65536, 1, 524298, 0, 0, 589835, 65536, 1, 589834, 65536, 1, 589837, 65536, 1, 589838, 65536, 1, 655373, 65536, 2, 655374, 65536, 2, 589839, 262144, 2, 655375, 65536, 2, 524303, 131072, 0, 589840, 65536, 0, 589841, 65536, 0, 655376, 65536, 2, 655377, 65536, 2, 655378, 65536, 2, 589827, 65536, 1, 589828, 65536, 1, 589829, 65536, 1, 589830, 65536, 1, 458759, 131072, 0, 524294, 65536, 1, 524295, 131072, 1, 524292, 65536, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="15"]
+stream = ExtResource("6_ix4bu")
+volume_db = -25.0

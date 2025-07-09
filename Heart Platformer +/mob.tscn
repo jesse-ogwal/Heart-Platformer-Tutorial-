@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3 uid="uid://cpksvmev0jrd3"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_aquy6"]
+[ext_resource type="Texture2D" uid="uid://cogjnlid465eg" path="res://enemy_player.png" id="1_vh86x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omh2b"]
+atlas = ExtResource("1_vh86x")
+region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a33dv"]
+atlas = ExtResource("1_vh86x")
+region = Rect2(24, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05usr"]
+atlas = ExtResource("1_vh86x")
+region = Rect2(48, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17d6b"]
+atlas = ExtResource("1_vh86x")
+region = Rect2(72, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4bhb"]
+atlas = ExtResource("1_vh86x")
+region = Rect2(96, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28yhw"]
+atlas = ExtResource("1_vh86x")
+region = Rect2(120, 0, 24, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v3xua"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omh2b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a33dv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05usr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17d6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4bhb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28yhw")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mppp2"]
+size = Vector2(10, 15)
+
+[node name="Mob" type="CharacterBody2D"]
+script = ExtResource("1_aquy6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v3xua")
+animation = &"idle"
+frame_progress = 0.46497
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+light_mask = 0
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_mppp2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
+target_position = Vector2(0, 11)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(0, 10, 6, 10, 6, -4, 4, -6, -4, -6, -6, -4, -6, 10)
