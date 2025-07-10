@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckptjjta137rd"]
+
+[ext_resource type="PackedScene" uid="uid://bi32hl7nibmyu" path="res://scenes/levels/new_world.tscn" id="1_pa3wb"]
+[ext_resource type="PackedScene" uid="uid://7w78e5rcjj3o" path="res://scenes/levels/level_three.tscn" id="2_nhmtd"]
+[ext_resource type="PackedScene" uid="uid://dmloyvxcs3tql" path="res://scenes/ui/spikes.tscn" id="3_knf7o"]
+[ext_resource type="PackedScene" uid="uid://6grglltwylv0" path="res://scenes/ui/heart.tscn" id="4_877sg"]
+[ext_resource type="AudioStream" uid="uid://dq36c8sn3anh8" path="res://assets/audio/2021-08-16_-_8_Bit_Adventure_-_www.FesliyanStudios.com.mp3" id="5_2j6of"]
+
+[node name="LevelTwo" instance=ExtResource("1_pa3wb")]
+next_level = ExtResource("2_nhmtd")
+
+[node name="LevelTileMap" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(131070, 393216, 0, 131071, 65536, 0, 196607, 65536, 1, 262143, 393216, 1, 196608, 131072, 1, 262144, 458752, 1, 327681, 131072, 0, 393217, 589824, 0, 393218, 65536, 0, 458754, 393216, 1, 524290, 0, 2, 524291, 65536, 2, 196606, 0, 1, 262142, 0, 2, 327679, 0, 2, 327680, 262144, 2, 458753, 0, 2, 393216, 0, 2, 393219, 65536, 0, 393220, 65536, 0, 393221, 65536, 0, 393222, 65536, 0, 458757, 65536, 1, 458756, 65536, 1, 458755, 65536, 1, 458758, 65536, 1, 458759, 65536, 1, 393223, 65536, 0, 524292, 65536, 2, 524293, 65536, 2, 524294, 65536, 2, 524295, 65536, 2, 524296, 327680, 3, 458760, 131072, 1, 393224, 131072, 0, 524297, 65536, 3, 524298, 65536, 3, 524299, 65536, 3, 524300, 393216, 3, 458764, 0, 1, 393228, 0, 1, 327692, 0, 1, 262156, 0, 1, 196620, 0, 0, 196621, 131072, 0, 262157, 327680, 2, 327693, 65536, 1, 393229, 65536, 1, 458765, 65536, 1, 524301, 65536, 2, 524302, 131072, 2, 458766, 131072, 1, 393230, 131072, 1, 327694, 131072, 1, 262158, 327680, 0, 262159, 458752, 3, 196623, 262144, 0, 196624, 65536, 3, 196625, 458752, 3, 131089, 262144, 0, 131090, 458752, 3, 65554, 196608, 1, 18, 196608, 1, -65518, 458752, 1, -65519, 0, 2, -131055, 393216, 0, -131056, 65536, 3, -131057, 65536, 3, -131058, 65536, 3, -131059, 65536, 3, -131060, 0, 3, 8, 131072, 3, 7, 65536, 3, 6, 262144, 3, -65530, 196608, 1, -131066, 196608, 1, -196602, 196608, 1, -262138, 196608, 1, -327674, 196608, 1, -393210, 196608, 1, -458746, 524288, 0, -458745, 458752, 3, -524281, 262144, 0, -524280, 65536, 3, -524279, 65536, 3, -524278, 458752, 0, -458742, 262144, 3, -458741, 65536, 3, -458740, 65536, 3, -458739, 65536, 3, -458738, 65536, 3, -458737, 65536, 3, -458736, 65536, 3, -458735, 65536, 3, -458734, 458752, 0, -393198, 196608, 1, -327662, 196608, 1, -262126, 196608, 1, -196590, 196608, 1, -131054, 458752, 2, 131069, 262144, 3, 65533, 196608, 1, -3, 196608, 1, -65539, 196608, 1, -131075, 196608, 1, -196611, 196608, 1, -262147, 196608, 1, -327683, 196608, 1, -393219, 262144, 0, -393218, 65536, 3, -393217, 65536, 3, -458752, 65536, 3, -458751, 65536, 3, -458750, 65536, 3, -458749, 65536, 3, -458748, 65536, 3, -458747, 65536, 3, 65536, 131072, 0, 131072, 131072, 1)
+
+[node name="NewPlayer" parent="." index="1"]
+position = Vector2(16, 120)
+
+[node name="CenterContainer" parent="CanvasLayer/StartIn" index="0"]
+offset_top = 8.0
+offset_bottom = 8.0
+
+[node name="Spikes" parent="." index="3" instance=ExtResource("3_knf7o")]
+position = Vector2(176, 232)
+
+[node name="Spikes2" parent="." index="4" instance=ExtResource("3_knf7o")]
+position = Vector2(192, 232)
+
+[node name="Spikes3" parent="." index="5" instance=ExtResource("3_knf7o")]
+position = Vector2(208, 232)
+
+[node name="Spikes4" parent="." index="6" instance=ExtResource("3_knf7o")]
+position = Vector2(256, 168)
+
+[node name="Heart" parent="." index="7" instance=ExtResource("4_877sg")]
+position = Vector2(120, 184)
+
+[node name="Heart2" parent="." index="8" instance=ExtResource("4_877sg")]
+position = Vector2(192, 152)
+
+[node name="Heart3" parent="." index="9" instance=ExtResource("4_877sg")]
+position = Vector2(160, 80)
+
+[node name="Heart4" parent="." index="10" instance=ExtResource("4_877sg")]
+position = Vector2(264, 48)
+
+[node name="Heart5" parent="." index="11" instance=ExtResource("4_877sg")]
+position = Vector2(288, 128)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="13"]
+stream = ExtResource("5_2j6of")
+volume_db = -15.0
