@@ -1,6 +1,4 @@
-Sure! I've added that to the Gameplay section. Here's the updated part:
 
-```markdown
 ### Gameplay
 
 1. Clone or download the repository.  
